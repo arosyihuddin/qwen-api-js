@@ -1,0 +1,29 @@
+{
+  "name": "qwen-api",
+  "version": "0.1.0",
+  "description": "Unofficial Qwen Chat API client for Node.js and TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "node --no-warnings --loader ts-node/esm --experimental-vm-modules test/client_stream.test.ts",
+    "test:watch": "nodemon -e ts --exec \"node --no-warnings --loader ts-node/esm --experimental-vm-modules test/client.test.ts\""
+  },
+  "keywords": ["qwen", "chat", "ai", "llm", "client"],
+  "author": "Ahmd Rosyihuddin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
