@@ -11,17 +11,23 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "node --no-warnings --loader ts-node/esm --experimental-vm-modules test/client_stream.test.ts",
-    "test:watch": "nodemon -e ts --exec \"node --no-warnings --loader ts-node/esm --experimental-vm-modules test/client.test.ts\""
+    "prepublishOnly": "npm run build",
+    "test:client": "npx tsx tests/client.test.ts",
+    "test:stream": "npx tsx tests/client_stream.test.ts"
   },
-  "keywords": ["qwen", "chat", "ai", "llm", "client"],
+  "keywords": [
+    "qwen",
+    "chat",
+    "ai",
+    "llm",
+    "client"
+  ],
   "author": "Ahmd Rosyihuddin",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.14.1",
-    "typescript": "^5.8.3",
-    "ts-node": "^10.9.2",
-    "nodemon": "^3.1.10"
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "dotenv": "^16.5.0"
